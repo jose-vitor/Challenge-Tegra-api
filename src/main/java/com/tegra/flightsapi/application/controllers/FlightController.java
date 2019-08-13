@@ -13,6 +13,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import com.tegra.flightsapi.domain.models.Flight;
 import com.tegra.flightsapi.domain.services.IAirportService;
 import com.tegra.flightsapi.domain.services.IFlightService;
+import com.tegra.flightsapi.domain.vo.AirportVO;
 
 @RestController
 public class FlightController {
@@ -39,7 +40,7 @@ public class FlightController {
 	}
 
 	@GetMapping("airports")
-	public String findAirports() {
+	public List<AirportVO> findAirports() {
 		try {
 			return airportService.getAll();
 		} catch (Exception e) {

@@ -1,6 +1,6 @@
 package com.tegra.flightsapi.domain.vo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import org.codehaus.jackson.annotate.JsonProperty;
 
 public class AirportVO {
 
@@ -12,4 +12,16 @@ public class AirportVO {
 
 	@JsonProperty("cidade")
 	private String city;
+
+	public String getName() {
+		return name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public String getCity() {
+		return city;
+	}
 }
